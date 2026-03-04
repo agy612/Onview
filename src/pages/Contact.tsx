@@ -1,6 +1,52 @@
 import { motion } from 'motion/react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { useState } from 'react';
+import { MapPin } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
+
+function KakaoMap() {
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const loadMap = () => {
+      if (!mapRef.current) return;
+      const { kakao } = window;
+      kakao.maps.load(() => {
+        const geocoder = new kakao.maps.services.Geocoder();
+        geocoder.addressSearch('부천시 청천동 380-53', (result: any, status: any) => {
+          if (status === kakao.maps.services.Status.OK) {
+            const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+            const map = new kakao.maps.Map(mapRef.current, {
+              center: coords,
+              level: 3,
+            });
+            const marker = new kakao.maps.Marker({ map, position: coords });
+            const infowindow = new kakao.maps.InfoWindow({
+              content: '<div style="padding:5px;font-size:12px;font-weight:bold;">오엔뷰</div>',
+            });
+            infowindow.open(map, marker);
+          }
+        });
+      });
+    };
+
+    if (window.kakao && window.kakao.maps) {
+      loadMap();
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_APP_KEY&autoload=false&libraries=services';
+    script.onload = loadMap;
+    document.head.appendChild(script);
+  }, []);
+
+  return <div ref={mapRef} className="w-full h-full" />;
+}
 
 export default function Contact() {
   const [activeTab, setActiveTab] = useState<'inquiry' | 'location'>('inquiry');
@@ -28,8 +74,8 @@ export default function Contact() {
             <button
               onClick={() => setActiveTab('inquiry')}
               className={`px-10 py-3 rounded-full text-lg font-bold transition-all duration-300 ${
-                activeTab === 'inquiry' 
-                  ? 'bg-[#176B36] text-white shadow-lg' 
+                activeTab === 'inquiry'
+                  ? 'bg-[#176B36] text-white shadow-lg'
                   : 'text-gray-500 hover:text-gray-900 hover:bg-gray-200'
               }`}
             >
@@ -38,8 +84,8 @@ export default function Contact() {
             <button
               onClick={() => setActiveTab('location')}
               className={`px-10 py-3 rounded-full text-lg font-bold transition-all duration-300 ${
-                activeTab === 'location' 
-                  ? 'bg-[#176B36] text-white shadow-lg' 
+                activeTab === 'location'
+                  ? 'bg-[#176B36] text-white shadow-lg'
                   : 'text-gray-500 hover:text-gray-900 hover:bg-gray-200'
               }`}
             >
@@ -50,7 +96,7 @@ export default function Contact() {
 
         <div className="max-w-5xl mx-auto">
           {activeTab === 'inquiry' ? (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -108,76 +154,34 @@ export default function Contact() {
               </form>
             </motion.div>
           ) : (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
               className="space-y-12"
             >
-              <div className="bg-gray-50 p-10 rounded-[3rem] border border-gray-100">
-                <h3 className="text-3xl font-bold mb-10 text-center">찾아오시는 길</h3>
-                <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                  <div className="flex items-start gap-5">
-                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 text-[#176B36] shadow-sm border border-gray-100">
-                      <MapPin className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900 mb-2 text-lg">Address</p>
-                      <p className="text-gray-600 leading-relaxed">
-                        경기도 화성시 동탄첨단산업1로 27<br/>
-                        금강펜테리움 IX타워 B동 1234호
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-5">
-                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 text-[#176B36] shadow-sm border border-gray-100">
-                      <Phone className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900 mb-2 text-lg">Phone</p>
-                      <p className="text-gray-600 text-lg">031-123-4567</p>
-                    </div>
-                  </div>
+              <div className="bg-gray-50 rounded-[3rem] border border-gray-100 overflow-hidden shadow-xl">
+                {/* Kakao Map */}
+                <div className="w-full h-[450px]">
+                  <KakaoMap />
+                </div>
 
-                  <div className="flex items-start gap-5">
-                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 text-[#176B36] shadow-sm border border-gray-100">
-                      <Mail className="w-6 h-6" />
+                {/* 주소 정보 오버레이 */}
+                <div className="p-8 md:p-10 bg-white border-t border-gray-100">
+                  <div className="flex items-center gap-5">
+                    <div className="w-14 h-14 bg-[#176B36] rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
+                      <MapPin className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <p className="font-bold text-gray-900 mb-2 text-lg">Email</p>
-                      <p className="text-gray-600">contact@onview.co.kr</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-5">
-                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 text-[#176B36] shadow-sm border border-gray-100">
-                      <Clock className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900 mb-2 text-lg">Business Hours</p>
-                      <p className="text-gray-600">
-                        Mon - Fri : 09:00 - 18:00<br/>
-                        Lunch : 12:00 - 13:00<br/>
-                        <span className="text-gray-400 text-sm">Sat, Sun, Holiday OFF</span>
+                      <p className="text-sm font-bold text-[#176B36] uppercase tracking-wider mb-1">Address</p>
+                      <p className="text-xl font-bold text-gray-900">
+                        청천동 380-53 1층 오엔뷰
                       </p>
+                      <p className="text-sm text-gray-400 mt-1">주식회사 오엔뷰 본사</p>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Map */}
-              <div className="w-full h-[500px] bg-gray-100 rounded-[3rem] overflow-hidden relative shadow-xl border border-gray-200">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.688676648764!2d127.0937893153051!3d37.19968997986926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b45a666666667%3A0x6666666666666666!2zKGl4KXRvd2Vy!5e0!3m2!1sko!2skr!4v1620000000000!5m2!1sko!2skr" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={true} 
-                  loading="lazy"
-                  className="grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-                ></iframe>
               </div>
             </motion.div>
           )}

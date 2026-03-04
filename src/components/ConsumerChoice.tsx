@@ -22,12 +22,9 @@ export default function ConsumerChoice() {
           className="mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
-            <span className="text-[#176B36]">오엔뷰!</span>
+            왜 많은 브랜드가<br/>
+            <span className="text-[#176B36]">오엔뷰를 선택할까요?</span>
           </h2>
-          <p className="text-2xl md:text-3xl font-bold text-gray-700 mb-4">
-            이유있는 선택,<br/>
-            사장님들께 원픽을 받는 이유
-          </p>
         </motion.div>
 
         {/* 6 Reasons Grid */}
@@ -64,12 +61,12 @@ export default function ConsumerChoice() {
           className="mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-            소비자는 어떤 화장품을<br/>
-            <span className="text-gray-400">선택하고 싶을까요?</span>
+            소비자는 무엇을 기준으로<br/>
+            <span className="text-gray-400">브랜드를 선택할까요?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            소비자가 브랜드를 선택하는 기준 중 하나는 바로 <span className="font-bold text-[#176B36] border-b-2 border-[#176B36]">'안전성'</span>입니다.<br/>
-            원료 선택과 품질 관리 기준이 명확해야 장기적인 신뢰를 확보할 수 있습니다.
+            소비자가 브랜드를 선택하는<br className="md:hidden" /> 중요한 기준은 <span className="font-bold text-[#176B36] border-b-2 border-[#176B36]">품질과 안정성</span>입니다.<br/>
+            원료 선정부터 제조 관리까지<br className="md:hidden" /> 명확한 기준이 필요합니다.
           </p>
         </motion.div>
 
@@ -82,11 +79,11 @@ export default function ConsumerChoice() {
             className="flex-1 relative group rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-[#176B36]"
           >
             <div className="absolute top-6 left-6 bg-[#176B36] text-white px-6 py-2 rounded-full text-sm font-bold z-10 flex items-center gap-2 shadow-lg">
-              <ShieldCheck className="w-5 h-5" /> FDA 등록 제조사
+              <ShieldCheck className="w-5 h-5" /> 오엔뷰 제조사
             </div>
             <div className="relative h-96">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+                src="/images/사진9.png"
                 alt="Clean Factory" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -96,7 +93,7 @@ export default function ConsumerChoice() {
                   <Check className="w-6 h-6 bg-white text-[#176B36] rounded-full p-1" />
                   신뢰할 수 있는 품질
                 </div>
-                <p className="opacity-90">FDA 등록을 마친 안전한 제조 시설</p>
+                <p className="opacity-90">체계적인 제조 관리 시스템 운영</p>
               </div>
             </div>
           </motion.div>
@@ -113,7 +110,7 @@ export default function ConsumerChoice() {
             </div>
             <div className="relative h-96">
               <img 
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80" 
+                src="/images/사진10.png"
                 alt="Dirty Factory" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -135,16 +132,15 @@ export default function ConsumerChoice() {
           viewport={{ once: true }}
           className="bg-gray-50 p-10 rounded-[2rem] border border-gray-100 inline-flex flex-col md:flex-row items-center gap-10 max-w-4xl mx-auto shadow-lg"
         >
-          <div className="w-48 h-24 bg-contain bg-no-repeat bg-center grayscale hover:grayscale-0 transition-all duration-500" style={{ backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/FDA_logo.svg/2560px-FDA_logo.svg.png)' }}></div>
+          <img src="/images/오엔뷰로고.png" alt="오엔뷰" className="w-48 h-auto object-contain" />
           <div className="text-left flex-1 border-l border-gray-200 pl-10">
             <h3 className="font-bold text-2xl text-gray-900 mb-2 flex items-center gap-2">
-              (주)오앤뷰는
+              (주)오엔뷰는
               <span className="bg-[#176B36] text-white text-xs px-2 py-1 rounded">Verified</span>
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              엄격한 품질 기준과 안정성을 중심으로 운영되며,<br/>
-              민감한 피부까지 고려한 제품 생산을 목표로<br/>
-              <strong className="text-gray-900 border-b border-gray-900">FDA 등록까지 완벽하게 마쳤습니다.</strong>
+              엄격한 품질 관리 기준을<br className="md:hidden" /> 바탕으로 운영됩니다.<br/>
+              <strong className="text-gray-900 border-b border-gray-900">안정성과 제조 관리 체계를<br className="md:hidden" /> 최우선으로 합니다.</strong>
             </p>
           </div>
         </motion.div>

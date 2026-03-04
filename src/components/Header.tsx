@@ -65,12 +65,13 @@ export default function Header() {
           {/* Logo */}
           <Link
             to="/"
-            className={`text-2xl font-black tracking-tighter ${
-              isLight ? 'text-white' : 'text-[#176B36]'
-            }`}
             onClick={() => setMenuOpen(false)}
           >
-            ONVIEW
+            <img
+              src={isLight ? '/images/오엔뷰로고2.png' : '/images/오엔뷰로고.png'}
+              alt="ONVIEW"
+              className="h-7 md:h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}

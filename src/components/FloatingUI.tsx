@@ -22,13 +22,14 @@ export default function FloatingUI() {
           <span className="hidden md:inline">상담 신청</span>
         </motion.button>
 
-        <motion.button 
+        <motion.a
+          href="tel:010-7661-5729"
           whileHover={{ scale: 1.05, x: -5 }}
           className="bg-white border border-[#176B36] text-[#176B36] p-3 md:px-6 md:py-3 rounded-full shadow-lg font-bold flex items-center justify-center gap-2 hover:bg-[#176B36] hover:text-white transition-colors"
         >
           <Phone className="w-5 h-5" />
           <span className="hidden md:inline">유선 상담</span>
-        </motion.button>
+        </motion.a>
         
         <motion.button 
           onClick={scrollToTop}

@@ -1,12 +1,10 @@
 import { motion } from 'motion/react';
 
 const sampleImages = [
-  "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1556228552-e166d78c898f?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=400&q=80",
+  "/images/사진5.png",
+  "/images/사진6.png",
+  "/images/사진7.png",
+  "/images/사진8.png",
 ];
 
 export default function SampleService() {
@@ -16,13 +14,13 @@ export default function SampleService() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/3 shrink-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 leading-tight">
-              생산 들어가기 전<br/>
-              샘플 확인은 필수!
+              생산 전 충분한<br/>
+              <span className="text-[#176B36]">샘플 테스트</span>를 진행합니다
             </h2>
             <div className="text-xl text-gray-600 mb-4 leading-relaxed">
-              <p>처음부터 큰 물량을 생산하는 방식은 현실적으로 위험 부담이 큽니다.</p>
-              <p className="mt-2"><span className="text-[#176B36] font-bold">빠른 시장 테스트용 샘플 대응이 가능</span>하여</p>
-              <p>시장 반응을 확인할 수 있는 소량 생산 환경을 지원합니다.</p>
+              <p>초기 대량 생산은<br/>브랜드에 부담이 될 수 있습니다.</p>
+              <p className="mt-2"><span className="text-[#176B36] font-bold">빠른 시장 테스트용 샘플 제작이 가능</span>해</p>
+              <p>시장 반응을 확인한 뒤<br/>생산을 진행할 수 있습니다.</p>
             </div>
             <p className="text-sm text-gray-400 mt-6">
               *유연한 생산 시스템은 비용 관리뿐 아니라 브랜드 운영 안정성에도 긍정적인 영향을 줍니다.

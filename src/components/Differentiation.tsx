@@ -43,8 +43,8 @@ export default function Differentiation() {
             소량 생산 & OEM·ODM<br/>맞춤 제조 시스템
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-            오엔뷰는 소량부터 가능한 맞춤 생산으로 초기 부담을 줄이고,<br/>
-            또한 브랜드가 원하는 OEM·ODM 방식에 따라 유연하게 대응합니다.
+            오엔뷰는 소량 생산과 OEM·ODM 방식으로<br/>
+            브랜드에 맞는 제조를 지원합니다.
           </p>
         </motion.div>
 
@@ -57,9 +57,9 @@ export default function Differentiation() {
             className="bg-white p-10 rounded-3xl border border-gray-100 shadow-lg text-left hover:border-[#176B36]/30 transition-all"
           >
             <div className="inline-block bg-[#176B36] text-white px-5 py-2 rounded-full font-bold text-lg mb-6">OEM</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">기존의 단순히 제품을<br/>전방위적 생산</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">기존 처방 기반<br/>위탁 생산</h3>
             <p className="text-gray-500 leading-relaxed">
-              고객이 원하는 제품을 오엔뷰의 설비와 기술력으로 위탁 생산합니다. 이미 확정된 레시피나 제형이 있는 브랜드에 적합합니다.
+              고객이 보유한 레시피나 기획안을 기반으로 안정적으로 생산합니다. 기존 제품을 빠르게 출시하고 싶은 브랜드에 적합합니다.
             </p>
           </motion.div>
           <motion.div
@@ -69,9 +69,9 @@ export default function Differentiation() {
             className="bg-white p-10 rounded-3xl border border-gray-100 shadow-lg text-left hover:border-[#176B36]/30 transition-all"
           >
             <div className="inline-block bg-[#1a1a1a] text-white px-5 py-2 rounded-full font-bold text-lg mb-6">ODM</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">가원래의 제품 제형,<br/>성분도에 특화</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">제품 기획부터 개발까지<br/>맞춤 설계</h3>
             <p className="text-gray-500 leading-relaxed">
-              제형 설계부터 성분 구성, 디자인까지 오엔뷰가 기획하여 브랜드에 맞는 제품을 개발합니다. 초기 창업자에게 적합합니다.
+              제형 설계, 성분 구성, 디자인 기획까지 오엔뷰가 함께합니다. 브랜드 콘셉트에 맞춘 제품 개발이 가능합니다.
             </p>
           </motion.div>
         </div>

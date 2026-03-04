@@ -37,10 +37,6 @@ export default function About() {
               기획부터 소량 생산 제작, 대량 생산, 디자인, 유통까지 원스톱으로 제공하는<br />
               <strong className="text-gray-900 font-bold mt-2 inline-block border-b-2 border-[#176B36]">전문 OEM·ODM 화장품 제조사</strong>입니다.
             </p>
-            <p className="text-gray-500 font-normal text-lg md:text-xl mt-6">
-              의료기기 및 피부과 전용 제품, 민들레씨 앙금 브랜드,<br className="hidden md:block" />
-              라이브 커머스 특화 라인까지 고객 맞춤형 전략으로 접근합니다.
-            </p>
           </motion.div>
         </div>
 
@@ -65,25 +61,25 @@ export default function About() {
           ))}
         </div>
 
+      </div>
+
+      {/* 초록 그라데이션 섹션 */}
+      <div className="py-36" style={{ background: 'linear-gradient(to bottom, white 0%, #176B36 15%, #176B36 85%, white 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-center text-white px-4"
         >
-          <span className="text-[#176B36] font-bold text-xl md:text-2xl block mb-6">(주)오앤뷰는</span>
-          <div className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mb-6 text-gray-900">
-            <span className="inline-block relative">
-              '빠르게 변하는 시장'
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#176B36]/20" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
-              </svg>
-            </span>
-            <span className="text-gray-300 mx-4 font-light">에 맞춰</span>
+          <span className="text-white/80 font-bold text-xl md:text-2xl block mb-6">(주)오엔뷰는</span>
+          <div className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-snug">
+            <span className="font-black text-white drop-shadow-lg">빠르게 변화하는 시장</span>
+            <span className="font-light text-white/80">에 맞춰</span>
           </div>
-          <div className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none text-[#176B36]">
-            '부지런히 성장' 했습니다.
+          <div className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-snug mt-4">
+            <span className="font-black text-white drop-shadow-lg">제조 역량을 지속적으로 확장</span>
+            <span className="font-light text-white/80">해왔습니다.</span>
           </div>
         </motion.div>
       </div>

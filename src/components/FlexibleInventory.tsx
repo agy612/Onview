@@ -10,11 +10,11 @@ export default function FlexibleInventory() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-medium mb-12 text-gray-900 leading-tight tracking-tight">
-            초기 부담을 줄이는<br/>
-            <span className="text-[#176B36]">유연한 생산 전략</span>
+          <h2 className="text-2xl md:text-3xl font-medium mb-12 text-gray-900 leading-tight tracking-tight">
+            초기 생산 리스크를 줄이는<br/>
+            유연한 출고 시스템을 제공합니다.
           </h2>
-          
+
           <div className="flex flex-col items-center gap-3 mb-12 opacity-20">
             <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
             <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
@@ -22,13 +22,7 @@ export default function FlexibleInventory() {
           </div>
 
           <h3 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            얼마든지 가능합니다.<br/>
-            그것도 <span className="text-[#FF6633] inline-block relative">
-              [ 무료 ]
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#FF6633]/30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
-              </svg>
-            </span>로 이용할 수 있습니다.
+            <span className="text-[#176B36]">재고 부담 없이 시작하세요.</span>
           </h3>
         </motion.div>
 
@@ -46,7 +40,7 @@ export default function FlexibleInventory() {
               whileInView={{ scale: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, rotate: -2 }}
-              className="w-72 h-72 rounded-[3rem] bg-[#FF6633] text-white flex flex-col items-center justify-center shadow-2xl z-10 relative overflow-hidden group"
+              className="w-72 h-72 rounded-[3rem] bg-[#176B36] text-white flex flex-col items-center justify-center shadow-2xl z-10 relative overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <Warehouse className="w-12 h-12 mb-4 opacity-80" />

@@ -1,10 +1,11 @@
 import { motion } from 'motion/react';
 
-const partnerBrands = [
-  "naysom", "NOVeLia", "Recien", "O-hada", "DENTIS",
-  "CELLINKEY", "ESSEREVE", "청아다향", "MAVANT", "fyucell",
-  "MAISON JUAIRE", "vivera", "HENON", "Marelle", "Mariposa",
-  "CELLUMÉRY", "DEAR BIRD",
+const partnerLogos = [
+  "네이솜", "노벨리아", "더마솔루션랩", "더버블크루", "덴티스",
+  "디어버드", "레시엔", "루미제이", "마렐", "마반트",
+  "메종주아르", "비베라", "셀인키", "아베넬", "에쎼레브",
+  "영하다", "웨타", "청아다향", "코매료", "코어듀",
+  "클리노드", "피유셀", "히녹스",
 ];
 
 export default function Clients() {
@@ -34,9 +35,9 @@ export default function Clients() {
           className="mb-16"
         >
           <p className="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed">
-            18시간! 코스메틱 일하는 <span className="text-[#176B36]">노하우</span>와 <span className="text-[#176B36]">열정</span>으로<br/>
-            <span className="text-[#176B36]">오엔뷰! 대표가 든든한 본사</span>가 되어<br/>
-            <span className="text-[#176B36] font-black">창업 성공을 지원</span>합니다.
+            수년간 축적해온 코스메틱 <span className="text-[#176B36]">개발 경험</span>을 바탕으로<br/>
+            <span className="text-[#176B36]">오엔뷰는 브랜드의 든든한 제조 파트너</span>가 되어<br/>
+            <span className="text-[#176B36] font-black">창업과 성장을 지원</span>합니다.
           </p>
         </motion.div>
 
@@ -68,9 +69,9 @@ export default function Clients() {
                 repeatType: "loop"
               }}
             >
-              {[...partnerBrands, ...partnerBrands, ...partnerBrands].map((brand, i) => (
-                <div key={i} className="w-48 h-24 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-600 font-bold border border-gray-100 hover:border-[#176B36]/30 hover:bg-white hover:text-[#176B36] hover:shadow-lg transition-all cursor-pointer shrink-0">
-                  <span className="text-lg tracking-tight">{brand}</span>
+              {[...partnerLogos, ...partnerLogos, ...partnerLogos].map((name, i) => (
+                <div key={i} className="w-32 h-32 bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100 hover:border-[#176B36]/30 hover:bg-white hover:shadow-lg transition-all cursor-pointer shrink-0 p-3">
+                  <img src={`/images/전체로고/${name}.png`} alt={name} className="w-full h-full object-contain" />
                 </div>
               ))}
             </motion.div>

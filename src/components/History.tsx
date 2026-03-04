@@ -40,39 +40,6 @@ export default function History() {
 
   return (
     <section>
-      {/* Green Stats Section */}
-      <div className="bg-[#176B36] text-white py-24 overflow-hidden relative">
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-            <div className="flex flex-col xl:flex-row items-center justify-between gap-12">
-                {/* SINCE 2006 Block */}
-                <div className="relative shrink-0 mb-8 xl:mb-0">
-                    <h2 className="text-[120px] md:text-[180px] leading-none font-black text-white/10 select-none absolute -top-10 -left-4 md:-left-10 z-0">
-                        SINCE
-                    </h2>
-                    <div className="relative z-10 pl-4 md:pl-8 pt-8">
-                        <span className="text-6xl md:text-8xl font-bold tracking-tighter">2006~</span>
-                    </div>
-                </div>
-
-                {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full xl:w-auto">
-                    <div className="flex flex-col md:border-l border-white/30 md:pl-8 text-center md:text-left">
-                        <h3 className="text-2xl font-bold mb-2">2대째</h3>
-                        <p className="text-lg opacity-90 leading-snug">제약바이오<br/>회사 운영</p>
-                    </div>
-                    <div className="flex flex-col md:border-l border-white/30 md:pl-8 text-center md:text-left">
-                        <h3 className="text-2xl font-bold mb-2">화장품,의약외품</h3>
-                        <p className="text-lg opacity-90 leading-snug">제조를 통해<br/>전세계에 수출</p>
-                    </div>
-                    <div className="flex flex-col md:border-l border-white/30 md:pl-8 text-center md:text-left">
-                        <h3 className="text-2xl font-bold mb-2">한분야에서</h3>
-                        <p className="text-lg opacity-90 leading-snug">수출을 <span className="font-bold border-b border-white">국내 3위까지</span> 하는<br/>큰 업적달성</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-
       {/* Timeline Slider Section */}
       <div className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -141,9 +108,9 @@ export default function History() {
 
       {/* Image Banner */}
       <div className="relative h-[500px] overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
-          alt="Handshake" 
+        <img
+          src="/images/사진4.png"
+          alt="Partnership"
           className="w-full h-full object-cover brightness-50"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-end container mx-auto px-4 max-w-6xl text-right text-white">
@@ -152,10 +119,8 @@ export default function History() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">제조를 넘어</h2>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">파트너십으로!</h2>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">브랜드의 성장을</h2>
-            <h2 className="text-4xl md:text-6xl font-bold">함께 설계합니다.</h2>
+            <h2 className="text-4xl md:text-6xl font-light mb-4">제조를 넘어,</h2>
+            <h2 className="text-4xl md:text-6xl font-bold">브랜드의 성장을 함께합니다.</h2>
           </motion.div>
         </div>
       </div>

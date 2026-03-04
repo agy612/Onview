@@ -6,9 +6,9 @@ export default function EWGGreen() {
     <section className="relative py-40 bg-[#1a2e1a] text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
-          alt="Forest" 
+        <img
+          src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+          alt="Forest"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a2e1a] via-transparent to-[#1a2e1a]"></div>

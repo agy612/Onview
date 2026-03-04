@@ -54,7 +54,7 @@ export default function GlobalExport() {
           {[
             { title: "국내 채널 유통", desc: "백화점, 면세점, 올리브영 등\n국내 주요 채널 입점 솔루션", img: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" },
             { title: "해외 마케팅", desc: "현지 인플루언서, SNS 마케팅\n국가별 맞춤형 전략 수립", img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" },
-            { title: "해외 무역·수출", desc: "수출 서류 대행, 통관 이슈 해결\n원스톱 무역 컨설팅", img: "https://images.unsplash.com/photo-1494412574643-35d3d4018519?auto=format&fit=crop&w=800&q=80" },
+            { title: "해외 무역·수출", desc: "수출 서류 대행, 통관 이슈 해결\n원스톱 무역 컨설팅", img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" },
             { title: "글로벌 채널 입점", desc: "아마존, 쇼피, 큐텐 등\n글로벌 대형 플랫폼 입점", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" }
           ].map((item, i) => (
             <motion.div 

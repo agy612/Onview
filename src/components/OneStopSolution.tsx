@@ -52,32 +52,11 @@ export default function OneStopSolution() {
               viewport={{ once: true }}
               className="relative z-10"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
-                alt="Meeting" 
+              <img
+                src="/images/사진18.png"
+                alt="Meeting"
                 className="w-full rounded-[2.5rem] shadow-2xl"
               />
-              
-              {/* Floating Card */}
-              <motion.div 
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-xl border border-gray-100 max-w-xs hidden md:block"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#176B36]/10 rounded-full flex items-center justify-center text-[#176B36]">
-                    <CheckCircle2 className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900">성공적인 파트너십</p>
-                    <p className="text-xs text-gray-500">Trusted by 500+ Brands</p>
-                  </div>
-                </div>
-                <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                  <div className="h-full w-full bg-[#176B36]"></div>
-                </div>
-              </motion.div>
             </motion.div>
             
             {/* Decorative Elements */}

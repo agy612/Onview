@@ -15,8 +15,8 @@ export default function SpeedToMarket() {
               <Rocket className="w-4 h-4" /> Speed to Market
             </span>
             <h2 className="text-4xl md:text-6xl font-bold leading-[1.1] text-gray-900 mb-8 tracking-tight">
-              트렌드가 끝나기 전<br />
-              <span className="text-gray-400">시장에 등장하는 것</span>
+              트렌드에 맞춰<br />
+              <span className="text-[#176B36]">빠르게 출시</span>합니다.
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
               시장 흐름을 이해하는 능력 역시 중요한 요소입니다.<br/>

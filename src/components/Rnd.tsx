@@ -35,17 +35,16 @@ export default function Rnd() {
             <span>R&D Center</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-4 leading-[1.1] tracking-tight">
-            <span className="text-[#4ade80]">오엔뷰!</span><br/>
-            다수 화장품 브랜드와 협력 중
+            여러 브랜드의 개발을<br/>
+            <span className="text-[#4ade80]">함께해온 오엔뷰</span>
           </h2>
           <p className="text-xl md:text-2xl font-light text-[#4ade80] mb-8">
-            (주)오앤뷰는 '매일' 연구합니다.
+            각 브랜드에 맞는 제형과 성분을 설계합니다.
           </p>
           <p className="text-gray-300 text-lg leading-relaxed mb-12 max-w-xl">
-            제품의 경쟁력은 결국 사용 경험에서 결정됩니다.
-            소비자는 패키지 디자인뿐 아니라 효능과 안전성까지 세심하게 살펴봅니다.
-            트렌드를 반영한 제형 개발과 브랜드 콘셉트에 맞춘 성분 설계가 가능할 때
-            차별화된 제품 완성이 가능해지고, 이는 시장에서의 지속적인 성장 기반이 됩니다.
+            제품의 경쟁력은 연구에서 완성됩니다.<br/>
+            트렌드를 반영한 제형 개발과 브랜드에 맞춘 성분 설계를 통해<br/>
+            차별화된 제품을 구현합니다.
           </p>
           
           <div className="flex flex-wrap gap-4">
@@ -69,9 +68,9 @@ export default function Rnd() {
         {/* Floating Cards Effect */}
         <div className="hidden lg:flex flex-col gap-6">
           {[
-            { title: "다수의 코스메틱 레시피 개발", desc: "피부과 및 기능성 제품 노하우를 바탕으로 다양한 레시피를 보유하고 있습니다." },
-            { title: "다수의 코스메틱 브랜드, 디자인 개발", desc: "브랜드 콘셉트에 맞는 패키지 디자인부터 용기 제안까지 함께합니다." },
-            { title: "다수의 브랜드 회사와의 협력 및 제조", desc: "소량 샘플도 신속 대응, 개발 기간 최소화로 빠르게 시장에 진출합니다." }
+            { title: "다양한 처방 보유", desc: "기능성·더마 중심 레시피 확보" },
+            { title: "브랜드 맞춤 제품 설계", desc: "콘셉트에 맞춘 제형 개발" },
+            { title: "다수 브랜드 협업 경험", desc: "샘플부터 본 생산까지 대응" }
           ].map((item, i) => (
             <motion.div 
               key={i}

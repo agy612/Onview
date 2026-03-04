@@ -15,12 +15,12 @@ export default function ZeroToHundred() {
             <span className="text-[#176B36] font-bold tracking-wider text-sm uppercase mb-4 block">Full Service</span>
             <h2 className="text-4xl md:text-6xl font-bold leading-[1.1] text-gray-900 mb-8">
               유연하게 시작하고<br />
-              <span className="text-[#176B36]">체계적으로 확장하세요</span>
+              <span className="text-[#176B36]">체계적으로 확장</span>합니다
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              브랜드 론칭을 준비하는 과정은 기대보다 훨씬 복잡하게 느껴질 수 있어요.<br/>
-              아이디어는 분명한데 실행 단계에서 막히는 경우가 많죠.<br/>
-              <strong className="text-gray-900">오앤뷰가 완벽하게 서포트합니다.</strong>
+              브랜드 론칭 과정은 예상보다 복잡합니다.<br/>
+              아이디어는 명확해도 실행 단계에서 어려움을 겪는 경우가 많습니다.<br/>
+              <strong className="text-gray-900">오엔뷰는 전 과정을 체계적으로 지원</strong>합니다.
             </p>
 
             <ul className="space-y-4 mb-10">

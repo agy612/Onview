@@ -6,26 +6,26 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const banners = [
   {
     id: 1,
-    subtitle: "Visible Science. Reliable Beauty.",
-    title: "화장품 제조의 모든 것\n오엔뷰에서 시작하세요",
-    desc: "기획부터 생산·유통까지,\n브랜드의 시작을 함께합니다.",
-    image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?auto=format&fit=crop&w=1920&q=80",
+    subtitle: "MANUFACTURING FIRST",
+    title: "화장품의 시작은\n제조입니다.",
+    desc: "오엔뷰는 기획부터 개발, 생산, 유통까지\n브랜드의 기반을 설계합니다.",
+    image: "/images/사진1.png",
     theme: "dark"
   },
   {
     id: 2,
-    subtitle: "OEM · ODM Manufacturing Partner",
-    title: "당신의 화장품 브랜드\n오엔뷰에서 시작하세요",
-    desc: "소량 생산부터 OEM·ODM 브랜딩·마케팅까지\n누구나 도전할 수 있는 제조 파트너",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1920&q=80",
+    subtitle: "IDEA TO PRODUCT",
+    title: "오엔뷰는 아이디어를\n제품으로 만듭니다.",
+    desc: "기획부터 R&D, 생산, 이퓨어 등 유통 연계까지\n한 번에 진행합니다.",
+    image: "/images/사진2.png",
     theme: "light"
   },
   {
     id: 3,
-    subtitle: "Global Standard Manufacturing",
-    title: "국내를 넘어\n글로벌까지",
-    desc: "싱가포르, 캐나다, 일본, 미국, 모로코 등\n해외 시장을 대상으로 한 제조 및 수출 협업을 진행하고 있습니다.",
-    image: "https://images.unsplash.com/photo-1631541909061-71e349d1f203?auto=format&fit=crop&w=1920&q=80",
+    subtitle: "GLOBAL STANDARD MANUFACTURING",
+    title: "국내를 넘어,\n글로벌 기준으로 만듭니다.",
+    desc: "싱가포르·캐나다·일본·미국 등\n글로벌 제조 프로젝트를 수행하고 있습니다.",
+    image: "/images/사진3.png",
     theme: "dark"
   }
 ];
@@ -83,7 +83,7 @@ export default function Hero() {
               <div className="inline-block bg-[#176B36] px-4 py-2 rounded-full text-sm font-bold mb-6 tracking-wider uppercase">
                 {banners[current].subtitle}
               </div>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tight mb-8 whitespace-pre-line">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.3] tracking-tight mb-8 whitespace-pre">
                 {banners[current].title}
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed whitespace-pre-line mb-12">
